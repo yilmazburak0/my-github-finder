@@ -1,0 +1,18 @@
+.navbar{
+    background-color: #6096B4;
+    display: flex;
+    gap: 16px;
+    height: 72px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo{
+    margin-left: 8px;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: bolder;
+}
+

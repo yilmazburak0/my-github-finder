@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Navbar from "./components/Navbar";
+import UserList from "./components/UserList";
+import Search from "./components/Search";
+import Alert from './components/Alert';
+import UsersContextProvider from './context/userContext';
+import AlertContextProvider from './context/alertContext';
 
-function App() {
+const App = () => {    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UsersContextProvider>
+      <AlertContextProvider>
+      <Navbar />
+      <Search />
+      <Alert />
+      <UserList />
+      </AlertContextProvider>
+    </UsersContextProvider>
   );
+  
+ 
 }
-
-export default App;
+export default App; 
